@@ -5,6 +5,6 @@
 - hosts: all
   become: true
   collections:
-    - frua.apt
+    - fruafr.apt
   roles:
     - autoremove

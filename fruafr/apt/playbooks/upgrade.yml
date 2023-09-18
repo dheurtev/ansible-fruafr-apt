@@ -1,11 +1,10 @@
 ---
-# APT dist upgrade
+# APT upgrade
 # Author: David HEURTEVENT
 # Date : 2023-09-17
 - hosts: all
   become: true
   collections:
-    - frua.apt
+    - fruafr.apt
   roles:
-    - dist_upgrade
-
+    - upgrade
