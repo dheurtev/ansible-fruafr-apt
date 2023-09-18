@@ -1,0 +1,10 @@
+---
+# tasks file for autoclean
+
+# Debian
+- block:
+  - name: 'DEBIAN - Remove useless packages from the cache'
+    become: true
+    ansible.builtin.apt:
+      autoclean: yes
+  when: ansible_os_family == 'Debian'

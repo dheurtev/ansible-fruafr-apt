@@ -1,0 +1,10 @@
+---
+# tasks file for upgrade
+
+# Debian
+- block:
+  - name : APT upgrade
+    become: true
+    apt:
+      upgrade: yes
+  when: ansible_os_family == 'Debian'

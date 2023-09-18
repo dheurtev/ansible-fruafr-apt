@@ -1,0 +1,10 @@
+---
+# APT update and keep in cache for a day
+# Author: David HEURTEVENT
+# Date : 2023-09-17
+- hosts: all
+  become: true
+  collections:
+    - frua.apt
+  roles:
+    - update

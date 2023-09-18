@@ -1,0 +1,10 @@
+---
+# tasks file for autoremove
+
+# Debian
+- block:
+  - name : APT autoremove
+    become: true
+    apt:
+      autoremove: true
+  when: ansible_os_family == 'Debian'
