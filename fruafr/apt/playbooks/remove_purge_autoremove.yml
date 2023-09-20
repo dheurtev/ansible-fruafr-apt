@@ -1,0 +1,12 @@
+---
+# APT remove purge autoremove
+# Author: David HEURTEVENT
+# Date : 2023-09-17
+- hosts: all
+  become: true
+  collections:
+    - fruafr.apt
+  roles:
+    - remove
+    - purge
+    - autoremove

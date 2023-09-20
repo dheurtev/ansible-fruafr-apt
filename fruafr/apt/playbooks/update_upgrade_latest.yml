@@ -1,0 +1,12 @@
+---
+# APT update and keep in cache for a day + upgrade all to latest + autoremove
+# Author: David HEURTEVENT
+# Date : 2023-09-17
+- hosts: all
+  become: true
+  collections:
+    - fruafr.apt
+  roles:
+    - update
+    - upgrade_latest_all
+    - autoremove
